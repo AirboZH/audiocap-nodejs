@@ -1,0 +1,39 @@
+{
+  "name": "audio-capture-app",
+  "version": "1.0.0",
+  "description": "System Audio Capture Demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node-gyp rebuild && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.audio-capture.app",
+    "mac": {
+      "identity": null,
+      "target": "dmg",
+      "hardenedRuntime": true,
+      "entitlements": "entitlements.mac.plist",
+      "entitlementsInherit": "entitlements.mac.plist"
+    },
+    "extraResources": [
+      {
+        "from": "build/Release/",
+        "to": "audio-capture/",
+        "filter": [
+          "*.node"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "wav": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0",
+    "node-gyp": "^10.2.0"
+  }
+}
