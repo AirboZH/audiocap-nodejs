@@ -4,7 +4,7 @@
   "description": "System Audio Capture Demo",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "node-gyp rebuild  && electron .",
     "build": "node-gyp rebuild && electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },

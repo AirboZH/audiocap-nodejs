@@ -1,0 +1,35 @@
+audiocap-nodejs
+├── audio_capture.cc
+├── binding.gyp
+├── build
+│   ├── Makefile
+│   ├── Release
+│   │   ├── audio_capture.node
+│   │   ├── nothing.a
+│   │   └── obj.target
+│   ├── audio_capture.target.mk
+│   ├── binding.Makefile
+│   ├── config.gypi
+│   ├── gyp-mac-tool
+│   └── node_modules
+├── dist
+│   ├── audio-capture-app-1.0.0-arm64.dmg
+│   ├── audio-capture-app-1.0.0-arm64.dmg.blockmap
+│   ├── builder-debug.yml
+│   ├── builder-effective-config.yaml
+│   ├── latest-mac.yml
+│   └── mac-arm64
+│       └── audio-capture-app.app
+├── entitlements.mac.plist
+├── index.html
+├── main.js
+├── node_modules
+│   ├── electron
+│   ├── electron-builder
+│   ├── node-addon-api
+│   ├── node-gyp
+│   └── wav
+├── package.json
+├── pnpm-lock.yaml
+├── renderer.js
+└── structure.txt
